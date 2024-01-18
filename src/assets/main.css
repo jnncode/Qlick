@@ -1,35 +1,43 @@
-@import './base.css';
+@import "./base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a,
-.green {
+.menu-container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  bottom: 0.5rem;
+}
+
+.menu-container ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-container li {
+  margin-right: 1rem;
+  list-style-type: none;
+}
+
+.menu-container a {
+  color: #000000;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  font-weight: 600;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.menu-container a:hover {
+  cursor: pointer;
+  color: #00bf63;;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media screen and (max-wodth: 768px) {
+  .menu-container {
+    flex-direction: column;
+    position: static;
   }
 }
