@@ -10,13 +10,12 @@ function returnHome() {
             <img @click="returnHome()" src="../assets/images/qlick.png" id="logo" class="logo-action" alt="logo-icon" draggable="false" /> <!--Navigate back to Home.-->
         </div>
         <div class="menu-container">
-            <li><RouterLink to="/">Dashboard</RouterLink></li>
-            <li><RouterLink to="/Contact">Contact</RouterLink></li>
-            <li><RouterLink to="/Lead">Lead</RouterLink></li>
-            <li><RouterLink to="/Activity">Activity</RouterLink></li>
-            <li><RouterLink to="/Report">Report</RouterLink></li>
-            <li><RouterLink to="/Support">Support</RouterLink></li>
-            <li><RouterLink to="/Profile">Profile</RouterLink></li>
+            <li id="dashboard"><RouterLink to="/Dashboard">Dashboard</RouterLink></li>
+            <li id="contact"><RouterLink to="/Contact">Contact</RouterLink></li>
+            <li id="lead"><RouterLink to="/Lead">Lead</RouterLink></li>
+            <li id="activity"><RouterLink to="/Activity">Activity</RouterLink></li>
+            <li id="report"><RouterLink to="/Report">Report</RouterLink></li>
+            <li id="profile"><RouterLink to="/Profile"><img src="../assets/images/avatar.png" class="user" alt="user" /></RouterLink></li>
         </div>
     </div>
 </template>
@@ -29,5 +28,10 @@ function returnHome() {
     }
     .logo-action:hover {
         cursor: pointer;
+    }
+
+    .user {
+        width: 2rem;
+        height: 2rem;
     }
 </style>
